@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veiculos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="container mt-5">
+    <a href="{% url 'index' %}" class="btn btn-secondary mb-3">Voltar</a>
+    <h1>Veículos:</h1>
+    {% block content %}
+    <ul class="list-group mb-3">
+      {% for veiculo in veiculos %}
+        <li class="list-group-item"><a href="{% url 'veiculo' veiculo.id %}">{{ veiculo }}</a></li>
+      {% empty %}
+        <li class="list-group-item">Não tem nenhum veículo cadastrado</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'add_veiculo' %}" class="btn btn-primary">Adicionar outro veículo</a>
+    {% endblock content %}
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abastecimento</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="container mt-5">
+    {% block content %}
+      <a href="{% url 'abas' %}" class="btn btn-secondary mb-3">Voltar</a>
+      <h3>Abastecimento:</h3>
+      <ul class="list-group mb-3">
+        <li class="list-group-item"><strong>Veículo</strong>: {{ aba.veiculo }}</li>
+        <li class="list-group-item"><strong>Tipo</strong>: {{ aba.tipo }}</li>
+        <li class="list-group-item"><strong>Total de litros</strong>: {{ aba.total_litros }}</li>
+        <li class="list-group-item"><strong>Valor do litro</strong>: {{ aba.valor_litro }}</li>
+        <li class="list-group-item"><strong>Data do abastecimento</strong>: {{ aba.data_abastecimento }}</li>
+        <li class="list-group-item"><strong>Valor total</strong>: {{ aba.valor_total }}</li>
+      </ul>
+      <a href="{% url 'up_aba' aba.id %}" class="btn btn-primary">Atualizar dados do abastecimento</a>
+      <a href="{% url 'del_aba' aba.id %}" class="btn btn-danger">Remover o abastecimento</a>
+    {% endblock content %}
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

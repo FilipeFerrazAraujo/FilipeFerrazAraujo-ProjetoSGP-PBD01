@@ -1,0 +1,4 @@
+[tool.taskipy.tasks]
+run = 'python manage.py runserver'
+migrate = 'python manage.py migrate'
+up_apl = 'python manage.py makemigrations aplicacao'

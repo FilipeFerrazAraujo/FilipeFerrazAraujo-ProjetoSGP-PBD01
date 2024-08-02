@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <meta name="description" content="Página inicial do sistema de gerenciamento de veículos">
+  <meta name="keywords" content="veículos, abastecimentos, gerenciamento">
+  <meta name="author" content="Seu Nome">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Bem-vindo ao Sistema de Gerenciamento de Posto</h1>
+    <div class="d-flex flex-column gap-3">
+      <a href="{% url 'veiculos' %}" class="btn btn-primary" aria-label="Gerenciar Veículos">
+        <i class="fa fa-car" aria-hidden="true"></i> Veículos
+      </a>
+      <a href="{% url 'abas' %}" class="btn btn-primary" aria-label="Gerenciar Abastecimentos">
+        <i class="fa fa-gas-pump" aria-hidden="true"></i> Abastecimentos
+      </a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
